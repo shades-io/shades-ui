@@ -2,16 +2,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Img = styled.img`
+const Text = styled.div`
     position: fixed;
     top: 20px;
-    left: 20px
+    left: 20px;
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    font-family: Roboto;
 `;
 
 const Logo = () => (
-    <Img
-        width="100"
-        src="http://d24wuq6o951i2g.cloudfront.net/img/events/id/273/2738374/assets/d13.logo.png" />
+    <Text>Shades</Text>
 );
 
 export default Logo;
