@@ -23,22 +23,27 @@ const options = {
         }
     },
     groups: {
-        project: {
+        Project: {
             icon: {
               code: 'assignment',
             }
         },
-        partner: {
+        Partner: {
             icon: {
               code: 'supervisor_account',
             }
         },
-        device: {
+        Device: {
             icon: {
               code: 'stay_current_portrait',
             }
         },
-        user: {
+        ModelGroup: {
+            icon: {
+                code: 'dashboard',
+            }
+        },
+        User: {
             icon: {
                 code: 'perm_identity'
             }

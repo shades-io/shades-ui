@@ -1,84 +1,76 @@
 {
     "projection": "graphlib",
     "result": {
-        "id": 12345,
-        "type": "project",
-        "data": {
-            "label": "Project 1"
-        },
+        "name": 12345,
+        "type": "Project",
+        "label": "Project 1",
         "children": [
             {
-                "id": 12343,
-                "type": "device",
-                "data": {
-                    "label": "Device 1"
-                },
+                "name": 12343,
+                "type": "Device",
+                "label": "Device 1",
                 "children": [],
-                "edge": {
-                    "custom": 12345,
-                    "label": "Model Group"
-                }
+                "edges": [
+                    {
+                        "label": "Model Group"
+                    }
+                ]
             },
             {
-                "id": 12344,
-                "type": "device",
-                "data": {
-                    "label": "Device 2"
-                },
+                "name": 12344,
+                "type": "Device",
+                "label": "Device 2",
                 "children": [],
-                "edge": {
-                    "custom": 12345,
-                    "label": "Model Group"
-                }
+                "edges": [
+                    {
+                        "label": "Model Group"
+                    }
+                ]
             },
             {
-                "id": 12346,
-                "type": "partner",
-                "data": {
-                    "label": "Partner 1"
-                },
+                "name": 12346,
+                "type": "Partner",
+                "label": "Partner 1",
                 "children": [
                     {
-                        "id": 1238,
-                        "type": "user",
-                        "data": {
-                            "label": "User 1"
-                        },
+                        "name": 1238,
+                        "type": "User",
+                        "label": "User 1",
                         "children": [],
-                        "edge": {
-                            "custom": 12346,
-                            "label": "Employee"
-                        }
+                        "edges": [
+                            {
+                                "label": "Employee"
+                            }
+                        ]
                     },
                     {
-                        "id": 12347,
-                        "type": "user",
-                        "data": {
-                            "label": "User 2"
-                        },
+                        "name": 12347,
+                        "type": "User",
+                        "label": "User 2",
                         "children": [],
-                        "edge": {
-                            "custom": 12346,
-                            "label": "Employee"
-                        }
+                        "edges": [
+                            {
+                                "label": "Employee"
+                            }
+                        ]
                     },
                     {
-                        "id": 12348,
-                        "type": "user",
-                        "data": {
-                            "label": "User 3"
-                        },
+                        "name": 12348,
+                        "type": "User",
+                        "label": "User 3",
                         "children": [],
-                        "edge": {
-                            "custom": 12346,
-                            "label": "Employee"
-                        }
+                        "edges": [
+                            {
+                                "label": "Employee"
+                            }
+                        ]
                     }
                 ],
-                "edge": {
-                    "custom": 12345,
-                    "label": "OEM"
-                }
+                "edges": [
+                    {
+                        "label": "OEM"
+                    }
+                ]
             }
         ]
     }

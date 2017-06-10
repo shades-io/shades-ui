@@ -6,24 +6,27 @@ export const createGraph = () => {
     };
 };
 
-export const addEdge = (node, graph) => {
+export const addEdges = (node, parentNode, graph) => {
 
     if (!node || !graph) {
         throw new Error('Please provide a node and a graph object.');
     }
     
-    if (!node.edge) {
+    if (!node.edges || !parentNode) {
         return;
     }
 
-    const newEdge = {
-        label: node.edge.label,
-        from: node.edge.custom,
-        to: node.id
-    };
+    node.edges
+        .forEach(edge => {
+            const newEdge = {
+                label: edge.label,
+                from: parentNode.name,
+                to: node.name
+            };
 
-    graph.edges = [ ...graph.edges, newEdge ];
-    
+            graph.edges = [ ...graph.edges, newEdge ];
+        });
+
     return graph;
 };
 
@@ -34,8 +37,8 @@ export const addNode = (node, graph) => {
     }
     
     const newNode = {
-        id: node.id,
-        label: node.data.label,
+        id: node.name,
+        label: node.label,
         group: node.type
     };
 
@@ -44,18 +47,18 @@ export const addNode = (node, graph) => {
     return graph;
 };
 
-export const traverseNode = (node, onNext) => {
+export const traverseNode = (node, parentNode, onNext) => {
 
     if (!node || !onNext) {
         throw new Error('Please provide a node and a callback function.');
     }
 
-    onNext(node);
+    onNext(node, parentNode);
 
     if (node.children && node.children.length) {
         node.children
             .forEach(childNode => {
-                traverseNode(childNode, onNext);
+                traverseNode(childNode, node, onNext);
             });
     }
 };

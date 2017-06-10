@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "better-react-spinkit": "^2.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-graph-vis": "^0.1.2",
+    "react-refetch": "^1.0.0",
     "styled-components": "^2.0.1"
   },
   "devDependencies": {

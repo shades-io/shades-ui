@@ -3,7 +3,7 @@ import {
     createGraph,
     traverseNode,
     addNode,
-    addEdge
+    addEdges
 } from './graph';
 
 export const dataModelToVisModel = data => {
@@ -11,9 +11,9 @@ export const dataModelToVisModel = data => {
     const graph = createGraph();
     const root = data.result;
 
-    traverseNode(root, node => {
+    traverseNode(root, false, (node, parentNode) => {
         addNode(node, graph);
-        addEdge(node, graph);
+        addEdges(node, parentNode, graph);
     });
 
     return graph;
